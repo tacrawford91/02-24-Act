@@ -1,0 +1,22 @@
+button{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.current_row{
+    background: lightgray;
+    height: 50px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.current_table{
+    width: 30px;
+    height: 30px;
+    background: rgb(61, 173, 204);
+    border-radius: 2px;
+    border: 1px solid blue;
+    margin-top: 10px;
+}
+
