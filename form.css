@@ -1,0 +1,30 @@
+.jumbotron{
+   margin: 1%;
+}
+.center{
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+}
+h4{
+    border: 1px solid rgb(160, 156, 156);
+    background: rgb(253, 251, 251);
+    padding: 1%;
+    margin-top: 0%;
+}
+.reservation{
+    margin: 0 auto;
+    border: 1px solid rgb(160, 156, 156);
+    width: 75%;
+    height: 50%;
+}
+
+.form-group{
+    margin: 1%;
+}
+
+.btn-default{
+    margin: 1%;
+    background-color: #428bca;
+    color: white;
+}

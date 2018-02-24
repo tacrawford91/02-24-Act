@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="form.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <div class="center">
+            <div class="glyphicon glyphicon-fire"></div>
+            <h1>Hot Restaurant</h1>
+            <p>Make Your Reservation</p>
+            <p>
+                <a class="btn btn-primary btn-lg" href="#" role="button">View tables</a>
+            </p>
+            <p>
+                <a class="btn glyphicon glyphicon-home btn-primary btn-lg" href="#" role="button"></a>
+            </p>
+        </div>
+    </div>
+    <div class="reservation">
+        <h4>Table Reservation</h4>
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Name</label>
+                <input type="email" class="form-control" id="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Phone Number</label>
+                <input type="password" class="form-control" id="phone" placeholder="Phone">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Email</label>
+                <input type="password" class="form-control" id="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Unique ID</label>
+                <input type="password" class="form-control" id="ID" placeholder="Unique ID">
+            </div>
+
+            <button type="submit" class="submit btn btn-default">Submit</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".submit").on("click", function (event) {
+                event.preventDefault();
+                var newUser = {
+                    name: $("#name").val().trim(),
+                    phone: $("#phone").val().trim(),
+                    email: $("#email").val().trim(),
+                    id: $("#ID").val().trim()
+                };
+                // Question: What does this code do??
+                $.ajax({
+                    url: "/",
+                    method: "POST"
+                }).done(function (response) {
+                    // retrieve data from url by making a route   
+                    console.log("AJAX post complete");              
+                });
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
